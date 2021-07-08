@@ -20,3 +20,21 @@ be customized by passing as value to the argument dir in template.
 # Revise
 - Use Revise to allow the re-compilation of changes.
 - From your julia environment execute the command: 
+
+# using, import and include
+- include: Adds the content of the file
+- using: Adds the functions defined in the module including the names into the current namespace (e.g. rate())
+- import: Only loads the package but does not bring any name into the current namespace. Avoids conflicts. (e.g. Calculator.rate())
+
+# Submodules
+- We can define submodules in different files and include them in the module.
+E.g.
+// Calculator.jl //
+module Calculator
+include(Mortgage.jl)
+end
+
+// Mortgage.jl //
+module Mortgage
+// mortgage source code here
+end
