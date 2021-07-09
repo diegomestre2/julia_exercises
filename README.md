@@ -38,3 +38,12 @@ end
 module Mortgage
 // mortgage source code here
 end
+
+# Modify variables in a function
+- When defining a function that modifies the value of an input add the '!' char after the function name
+
+# Defining types
+- Primary types are defined like any other language but in multiples of 8 bits, Int8, Int16, ... Int128.
+- Complex types are defined using the keyword struct type_name end.
+- Abstract types are defined using the keywords abstract type type_name end
+- Abstract child types are defined as abstract type type_name <: type_father end
