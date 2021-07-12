@@ -47,3 +47,7 @@ end
 - Complex types are defined using the keyword struct type_name end.
 - Abstract types are defined using the keywords abstract type type_name end
 - Abstract child types are defined as abstract type type_name <: type_father end
+
+# Multable vs. Immutable
+- Immutable objects are easier to handle. Good for functions that caches calculation results. Ensures consistency.
+- Mutable objects are more complex mostly in a multi-threading application where a locking mechanism is necessary to ensure consistency.

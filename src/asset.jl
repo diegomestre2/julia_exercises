@@ -10,6 +10,13 @@ abstract type Apartment <: Property end
 abstract type FixedIncome <: Investment end
 abstract type Equity <: Investment end
 
+abstract type Art end
+
+struct Painting <: Art
+    artist::String
+    title::String
+end
+
 # Display the entire type hierarch starting from the specified 'roottype'
 function subtypetree(roottype, level=1, indent=4)
     level == 1 && println(roottype)
@@ -45,7 +52,31 @@ function describe(s::Stock)
     return s.symbol * "(" * s.name * ")"
 end
 
-struct BasketOfStocks
-    stocks::Vector{Stock}
+const Thing = Union(Painting, Stock)
+
+struct BasketOfThings
+    stocks::Vector{Thing}
     reason::String
+end
+
+struct StockHolding{T <: Real,P <: AbstractFloat}
+    stock::Stock
+    quantity::T
+    price::P
+    marketvale::P
+end
+
+abstract type Holding{P} end
+
+struct StockHolding3{T,P} <: Holding{P}
+    stock::Stock
+    quantity::T
+    price::P
+    marketvalue::P
+end
+
+struct CashHolding{P} <: Holding{P}
+    currency::String
+    amount::P
+    marketvalue::P
 end
