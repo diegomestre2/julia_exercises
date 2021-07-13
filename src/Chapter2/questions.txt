@@ -1,0 +1,8 @@
+1. How de we create a new namespace?
+2. How do we expose the functions of a module to the outside world?
+3. How do we reference the proper function when the same function name is exported from different packages?
+4. When do we separate code into multiple modules?
+5. Why is smantic versioning important in managing package dependencies?
+6. How is defining functional behavior for abstract types usefully?
+7. When should we make a type mutable?
+8. How are parametric types useful?

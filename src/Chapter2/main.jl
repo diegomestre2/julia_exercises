@@ -1,3 +1,4 @@
+using Base: String
 
 include("Calculator.jl")
 include("asset.jl")

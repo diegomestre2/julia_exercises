@@ -17,7 +17,10 @@ struct Painting <: Art
     title::String
 end
 
-# Display the entire type hierarch starting from the specified 'roottype'
+"""
+subtypetree(roottype, level=1, indent=4)
+    Display the entire type hierarchy starting from the specified 'roottype'
+"""
 function subtypetree(roottype, level=1, indent=4)
     level == 1 && println(roottype)
     for s in subtypes(roottype)
@@ -48,15 +51,15 @@ mutable struct Stock <: Equity
     name::String
 end
 
-function describe(s::Stock)
-    return s.symbol * "(" * s.name * ")"
-end
-
-const Thing = Union(Painting, Stock)
+const Thing = Union{Painting,Stock}
 
 struct BasketOfThings
     stocks::Vector{Thing}
     reason::String
+end
+
+function describe(s::Stock)
+    return s.symbol * "(" * s.name * ")"
 end
 
 struct StockHolding{T <: Real,P <: AbstractFloat}
