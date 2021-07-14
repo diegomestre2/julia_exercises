@@ -1,8 +1,26 @@
 1. How de we create a new namespace?
+We can create a namespace by defining a module which is
+a set of variables, objects or functions between the keyswords module and end.
+The name of the module defines the name of the namespace.
+
 2. How do we expose the functions of a module to the outside world?
+Using the keyword export.
+
 3. How do we reference the proper function when the same function name is exported from different packages?
+Using the module name from where the function belongs. (i.e. Calculator.rate)
+
 4. When do we separate code into multiple modules?
-5. Why is smantic versioning important in managing package dependencies?
+When a module becomes too large.
+
+5. Why is semantic versioning important in managing package dependencies?
+Because it avoids problems with package update by keeping a version of each dependency.
+
 6. How is defining functional behavior for abstract types usefully?
+Because we can just focus in functional behavior and the possible interactions between them.
+Defining common behaviors for types.
+
 7. When should we make a type mutable?
+When the type will be updated at some point.
+
 8. How are parametric types useful?
+You can define generic types that are defined during runtime automatically.
