@@ -1,4 +1,4 @@
-# julia_exercises
+# Exercises from the book 'Hands-On Design Patterns and Best Practices with Julia'
 In your terminal, execute the command julia to start a session
 
 # To create new packages
