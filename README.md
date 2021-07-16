@@ -51,3 +51,20 @@ end
 # Multable vs. Immutable
 - Immutable objects are easier to handle. Good for functions that caches calculation results. Ensures consistency.
 - Mutable objects are more complex mostly in a multi-threading application where a locking mechanism is necessary to ensure consistency.
+
+
+# Slurping (...)
+- Whem using slurping, parameters are passed as itens of a tuple that should be iterated to get the results.
+- It makes possible to call a function with any number of arguments
+
+# Keyword arguments (;)
+- With keyword arguments it is possible to call a function with optional arguments in a different order.
+
+# Splatting arguments
+- The variable will be automatically assigned as multiple function arguments.
+
+# Anonymous functions
+- Use the -> operator to create an anonymous function (function = input -> do_something(input))
+
+# Multiple Dispatch
+- It defines multiple functions with different parameters and same signature. Julia calls the function for the corresponding argument's types
