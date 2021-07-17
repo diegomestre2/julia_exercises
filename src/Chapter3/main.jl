@@ -75,13 +75,21 @@ function test_random_collide()
     a3 = Asteroid(Position(50, 0), Size(20, 20))
     check_randomly([s1,s2,s3,a1,a2,a3])
 end
+
+function test_parameters_type()
+    a1 = Asteroid(Position(30, 0), Size(20, 20))
+    a2 = Asteroid(Position(40, 0), Size(20, 20))
+    explode([a1,a2])
+    explode_2([:building, :hill])
+end
 function main()
     # test_position()
     # test_shoot()
     # test_formation()
     # test_cleanup()
-    test_missile()
-    test_file()
+    #test_missile()
+    #test_file()
+    test_parameters_type()
 end
 
 

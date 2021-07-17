@@ -129,5 +129,30 @@ function process_file(func::Function, filename::AbstractString)
     end
 end
 
+# explode an array of abjects function explode(things::AbstractVector{AnyObject})
+function explode(things::AbstractVector{T}) where {T <: Thing}
+    for t in things
+        println("Exploding ", t)
+    end
+end
+
+function explode(things::AbstractVector{T}) where {T}
+    for t in things
+        println("Exploding ", t)
+    end
+end
+
+function tow(A::Spaceship, B::Thing)
+    "tow 1"
+end
+
+# equivalent of parametric type
+function tow(A::Spaceship, B::T) where {T <: Thing}
+    "tow 2"
+end
+
+function group_anything(A::T, B::T) where {T <: Thing}
+    println("Grouped ", A, " and ", B)
+end
 
 
