@@ -1,0 +1,11 @@
+1. How are positional arguments different from keyword arguments?
+2. What is the difference between splatting and slurping?
+3. What is the purpose of using the do-syntax?
+4. What tool is available for detecting method ambiguities as related to multiple dispatches?
+5. How do you ensure that the same concrete type is passed to a function in a parametric method?
+6. How are interfaces implemented without any formal language syntax?
+
+7. How do you implement traits, and how are traits useful?
+
+You can implement traits with a default function definition that returns a default value in the interface
+and for the concrete types you can implement its expected code. They are useful to model object behaviors.

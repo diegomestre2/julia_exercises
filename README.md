@@ -10,16 +10,17 @@ In your terminal, execute the command julia to start a session
 
 By default the packages will be created in the directory ~/.julia/dev but it can
 be customized by passing as value to the argument dir in template.
+- You can also use the command 'generate Path/to/ModuleName'
 
 # To include files
-
+- includes the content of the file inside the new file
 - define a file with .jl extension
 - add include("file_name.jl") to your main file
 - From your julia environment execute the command: include("path/to/file/main.jl")
 
 # Revise
 - Use Revise to allow the re-compilation of changes.
-- From your julia environment execute the command: 
+- From your julia environment execute the command: Pkg.add(Revise)
 
 # using, import and include
 - include: Adds the content of the file

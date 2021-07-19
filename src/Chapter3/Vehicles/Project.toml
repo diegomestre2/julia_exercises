@@ -1,0 +1,4 @@
+name = "Vehicles"
+uuid = "3d5a1ecc-fe68-4926-abb1-e0e0d6915aef"
+authors = ["Diego Gomes Tome <diegogomest@gmail.com>"]
+version = "0.1.0"

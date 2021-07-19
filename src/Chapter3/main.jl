@@ -82,6 +82,15 @@ function test_parameters_type()
     explode([a1,a2])
     explode_2([:building, :hill])
 end
+
+
+
+include("FighterJets/src/FighterJets.jl")
+function test_fighter_jet()
+    fj = FighterJets.FighterJet(false, 0, (0, 0))
+    Vehicles.go!(fj, :mars)
+end
+
 function main()
     # test_position()
     # test_shoot()
@@ -89,7 +98,8 @@ function main()
     # test_cleanup()
     #test_missile()
     #test_file()
-    test_parameters_type()
+    #test_parameters_type()
+    test_fighter_jet()
 end
 
 

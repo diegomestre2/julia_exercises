@@ -1,0 +1,4 @@
+name = "FighterJets"
+uuid = "17f267ad-dc9b-4f37-8588-8d5c8c3c86d8"
+authors = ["Diego Gomes Tome <diegogomest@gmail.com>"]
+version = "0.1.0"
